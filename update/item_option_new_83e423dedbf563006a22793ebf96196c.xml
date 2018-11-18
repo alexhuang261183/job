@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="apply jobs">84c85b56dbf563006a22793ebf961931</cat_item>
+        <cat_item/>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -25,28 +25,28 @@
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
-        <list_table>x_269830_job_appli_job_listing</list_table>
-        <lookup_label>job description</lookup_label>
+        <list_table/>
+        <lookup_label/>
         <lookup_price/>
-        <lookup_table>x_269830_job_appli_job_listing</lookup_table>
+        <lookup_table/>
         <lookup_unique>false</lookup_unique>
-        <lookup_value>sys_id</lookup_value>
+        <lookup_value/>
         <macro/>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>the_job_you_want_to_apply</name>
+        <name>last_name</name>
         <order/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
-        <question_text>the job you want to apply</question_text>
+        <question_text>last name</question_text>
         <read_roles/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference>x_269830_job_appli_job_listing</reference>
+        <reference/>
         <reference_qual/>
         <reference_qual_condition/>
         <scale_max>5</scale_max>
@@ -57,19 +57,19 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>alex.huang</sys_created_by>
-        <sys_created_on>2018-11-18 10:17:59</sys_created_on>
-        <sys_id>0e8c131adbf563006a22793ebf9619b5</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>the job you want to apply</sys_name>
+        <sys_created_on>2018-11-18 10:52:32</sys_created_on>
+        <sys_id>83e423dedbf563006a22793ebf96196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>last name</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
-        <sys_update_name>item_option_new_0e8c131adbf563006a22793ebf9619b5</sys_update_name>
+        <sys_update_name>item_option_new_83e423dedbf563006a22793ebf96196c</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-18 12:30:54</sys_updated_on>
+        <sys_updated_on>2018-11-18 10:52:32</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>8</type>
+        <type>6</type>
         <ui_page/>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
@@ -83,22 +83,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=0e8c131adbf563006a22793ebf9619b5"/>
-    <fx_price action="delete_multiple" query="id=0e8c131adbf563006a22793ebf9619b5"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=83e423dedbf563006a22793ebf96196c"/>
+    <fx_price action="delete_multiple" query="id=83e423dedbf563006a22793ebf96196c"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>0e8c131adbf563006a22793ebf9619b5</id>
+        <id>83e423dedbf563006a22793ebf96196c</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>alex.huang</sys_created_by>
-        <sys_created_on>2018-11-18 10:17:59</sys_created_on>
-        <sys_id>890d571adbf563006a22793ebf96192a</sys_id>
+        <sys_created_on>2018-11-18 10:52:32</sys_created_on>
+        <sys_id>c3e423dedbf563006a22793ebf96196e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-18 10:17:59</sys_updated_on>
+        <sys_updated_on>2018-11-18 10:52:32</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -106,16 +106,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>0e8c131adbf563006a22793ebf9619b5</id>
+        <id>83e423dedbf563006a22793ebf96196c</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>alex.huang</sys_created_by>
-        <sys_created_on>2018-11-18 10:17:59</sys_created_on>
-        <sys_id>700d571adbf563006a22793ebf961929</sys_id>
+        <sys_created_on>2018-11-18 10:52:32</sys_created_on>
+        <sys_id>43e423dedbf563006a22793ebf96196d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-18 10:17:59</sys_updated_on>
+        <sys_updated_on>2018-11-18 10:52:32</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
