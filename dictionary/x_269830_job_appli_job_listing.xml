@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="job listing" max_length="40" name="x_269830_job_appli_job_listing" type="collection">
-        <element label="end date" max_length="40" name="end_date" type="glide_date_time"/>
-        <element display="true" label="job description" max_length="200" name="job_description" type="string"/>
+        <element label="end date" mandatory="true" max_length="40" name="end_date" type="glide_date_time"/>
+        <element display="true" label="job description" mandatory="true" max_length="200" name="job_description" type="string"/>
+        <element label="job description long" max_length="800" name="job_description_long" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="start date" max_length="40" name="start_date" type="glide_date_time"/>
+        <element label="start date" mandatory="true" max_length="40" name="start_date" type="glide_date_time"/>
     </element>
 </database>

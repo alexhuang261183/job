@@ -32,12 +32,12 @@
         <lookup_unique>false</lookup_unique>
         <lookup_value/>
         <macro/>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>which_job_do_you_want_to_apply</name>
-        <order/>
+        <order>1</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <question_text>which job do you want to apply</question_text>
@@ -59,14 +59,14 @@
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-18 14:58:33</sys_created_on>
         <sys_id>fcbcd862dbb963006a22793ebf9619a0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>which job do you want to apply</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>item_option_new_fcbcd862dbb963006a22793ebf9619a0</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-18 15:04:59</sys_updated_on>
+        <sys_updated_on>2018-11-18 16:35:23</sys_updated_on>
         <table/>
         <tooltip/>
         <type>8</type>

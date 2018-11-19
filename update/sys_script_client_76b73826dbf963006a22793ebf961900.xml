@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>end_date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>start date end date validation</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+    var startDate = g_form.getValue("start_date");
+    var endDate = g_form.getValue("end_date");
+    var format = g_user_date_time_format;
+    var startDateMs = getDateFromFormat(startDate, format);
+    var endDateMs = getDateFromFormat(endDate, format);
+
+//alert("Hi "+startDate);
+
+//alert("end" + endDate);
+
+if (startDateMs > endDateMs ) {
+			g_form.addErrorMessage(new GwtMessage().getMessage("{0} must be after {1}", g_form.getLabelOf("end_date"), g_form.getLabelOf("start_date")));
+               return false;
+       }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-18 16:57:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>76b73826dbf963006a22793ebf961900</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>start date end date validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sys_script_client_76b73826dbf963006a22793ebf961900</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-18 16:58:55</sys_updated_on>
+        <table>x_269830_job_appli_job_listing</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
