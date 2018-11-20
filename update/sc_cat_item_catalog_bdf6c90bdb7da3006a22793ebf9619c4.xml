@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
     <sc_cat_item_catalog action="INSERT_OR_UPDATE">
-        <sc_cat_item display_value="apply jobs">593c5462dbb963006a22793ebf961981</sc_cat_item>
+        <sc_cat_item display_value="apply job">afc5410bdb7da3006a22793ebf961948</sc_cat_item>
         <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
         <sys_class_name>sc_cat_item_catalog</sys_class_name>
         <sys_created_by>alex.huang</sys_created_by>
-        <sys_created_on>2018-11-18 14:55:59</sys_created_on>
-        <sys_id>91ac9862dbb963006a22793ebf961938</sys_id>
+        <sys_created_on>2018-11-20 07:17:51</sys_created_on>
+        <sys_id>bdf6c90bdb7da3006a22793ebf9619c4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Service Catalog.apply jobs</sys_name>
+        <sys_name>Service Catalog.apply job</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
-        <sys_update_name>sc_cat_item_catalog_91ac9862dbb963006a22793ebf961938</sys_update_name>
+        <sys_update_name>sc_cat_item_catalog_bdf6c90bdb7da3006a22793ebf9619c4</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-18 14:55:59</sys_updated_on>
+        <sys_updated_on>2018-11-20 07:17:51</sys_updated_on>
     </sc_cat_item_catalog>
 </record_update>

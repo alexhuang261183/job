@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="job" label="Job" language="en" table="x_269830_job_appli_applicant">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>job</element>
+            <help/>
+            <hint/>
+            <label>Job</label>
+            <language>en</language>
+            <name>x_269830_job_appli_applicant</name>
+            <plural>Jobs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>alex.huang</sys_created_by>
+            <sys_created_on>2018-11-20 09:50:10</sys_created_on>
+            <sys_id>bcd9ad4fdbbda3006a22793ebf96199a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Job</sys_name>
+            <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+            <sys_update_name>sys_documentation_x_269830_job_appli_applicant_job_en</sys_update_name>
+            <sys_updated_by>alex.huang</sys_updated_by>
+            <sys_updated_on>2018-11-20 09:50:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
