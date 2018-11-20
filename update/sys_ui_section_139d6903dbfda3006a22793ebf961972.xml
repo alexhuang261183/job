@@ -364,6 +364,20 @@
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>due_date</element>
+            <position>26</position>
+            <sys_created_by>alex.huang</sys_created_by>
+            <sys_created_on>2018-11-20 13:53:57</sys_created_on>
+            <sys_id>80a126c3db71e3006a22793ebf96196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_269830_job_appli_applicant" sys_domain="global" view="Default view">139d6903dbfda3006a22793ebf961972</sys_ui_section>
+            <sys_updated_by>alex.huang</sys_updated_by>
+            <sys_updated_on>2018-11-20 13:53:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
