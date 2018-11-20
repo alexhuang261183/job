@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <homepage display_value="home">bf2987cfdbb1e3006a22793ebf961913</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page/>
+        <logo/>
+        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu display_value="SP Header Menu">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
+        <sqanda_knowledge_base/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-20 16:41:55</sys_created_on>
+        <sys_id>ff170fcbdbb1e3006a22793ebf96193a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>MyHR</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sp_portal_ff170fcbdbb1e3006a22793ebf96193a</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-20 17:11:26</sys_updated_on>
+        <theme display_value="hr theme">502ecb83dbf1e3006a22793ebf9619d0</theme>
+        <title>MyHR</title>
+        <url_suffix>myhr</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=ff170fcbdbb1e3006a22793ebf96193a"/>
+</record_update>
