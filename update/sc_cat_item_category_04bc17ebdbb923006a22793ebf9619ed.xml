@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
     <sc_cat_item_category action="INSERT_OR_UPDATE">
         <sc_cat_item display_value="apply job">afc5410bdb7da3006a22793ebf961948</sc_cat_item>
-        <sc_category display_value="jobs">3cc4af9edbf563006a22793ebf961971</sc_category>
+        <sc_category display_value="Job application">955b17abdbb923006a22793ebf961978</sc_category>
         <sys_class_name>sc_cat_item_category</sys_class_name>
         <sys_created_by>alex.huang</sys_created_by>
-        <sys_created_on>2018-11-20 07:17:51</sys_created_on>
-        <sys_id>75f6c90bdb7da3006a22793ebf9619c8</sys_id>
+        <sys_created_on>2018-11-22 07:29:05</sys_created_on>
+        <sys_id>04bc17ebdbb923006a22793ebf9619ed</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>jobs.apply job</sys_name>
+        <sys_name>Job application.apply job</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
-        <sys_update_name>sc_cat_item_category_75f6c90bdb7da3006a22793ebf9619c8</sys_update_name>
+        <sys_update_name>sc_cat_item_category_04bc17ebdbb923006a22793ebf9619ed</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-20 07:17:51</sys_updated_on>
+        <sys_updated_on>2018-11-22 07:29:05</sys_updated_on>
     </sc_cat_item_category>
 </record_update>

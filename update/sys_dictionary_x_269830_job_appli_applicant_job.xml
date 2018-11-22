@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-20 09:50:09</sys_created_on>
-        <sys_id>b007878bdbb1e3006a22793ebf961960</sys_id>
+        <sys_id>6fb25787dbf1e3006a22793ebf96195a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>job</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sys_dictionary_x_269830_job_appli_applicant_job</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-11-20 16:37:19</sys_updated_on>
+        <sys_updated_on>2018-11-20 17:28:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

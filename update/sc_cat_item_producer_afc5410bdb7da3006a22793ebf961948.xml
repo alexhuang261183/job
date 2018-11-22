@@ -4,7 +4,7 @@
         <availability>on_both</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category display_value="jobs">3cc4af9edbf563006a22793ebf961971</category>
+        <category display_value="Job application">955b17abdbb923006a22793ebf961978</category>
         <cost>0</cost>
         <custom_cart/>
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
@@ -54,14 +54,14 @@
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-20 07:17:51</sys_created_on>
         <sys_id>afc5410bdb7da3006a22793ebf961948</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>apply job</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sc_cat_item_producer_afc5410bdb7da3006a22793ebf961948</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-20 10:06:29</sys_updated_on>
+        <sys_updated_on>2018-11-22 07:30:46</sys_updated_on>
         <table_name>x_269830_job_appli_applicant</table_name>
         <template/>
         <type>item</type>
