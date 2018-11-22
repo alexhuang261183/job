@@ -36,7 +36,7 @@
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>which_job_do_you_want_to_apply</name>
+        <name>job_description</name>
         <order>10</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -59,14 +59,14 @@
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-20 07:19:43</sys_created_on>
         <sys_id>aa074d0bdb7da3006a22793ebf961921</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>which job do you want to apply</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>job_description</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>item_option_new_aa074d0bdb7da3006a22793ebf961921</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-20 10:06:29</sys_updated_on>
+        <sys_updated_on>2018-11-22 12:46:44</sys_updated_on>
         <table/>
         <tooltip/>
         <type>8</type>
