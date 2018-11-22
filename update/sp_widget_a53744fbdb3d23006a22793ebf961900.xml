@@ -4,6 +4,7 @@
         <client_script><![CDATA[function() {
   /* widget controller */
   var c = this;
+	
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -48,22 +49,24 @@ data.items = items;
 
 
 
-
 ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-22 10:35:35</sys_created_on>
         <sys_id>a53744fbdb3d23006a22793ebf961900</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>HR Popular Forms</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sp_widget_a53744fbdb3d23006a22793ebf961900</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-22 12:05:24</sys_updated_on>
-        <template><![CDATA[<h1  class="font-thin m-t-none">{{::options.title}}</h1> 
+        <sys_updated_on>2018-11-22 16:46:02</sys_updated_on>
+        <template><![CDATA[
+
+
+<h1  class="font-thin m-t-none">{{::options.title}}</h1> 
 
 <div class="row" >      
   <div class="col-sm-6 col-md-4" ng-repeat="item in data.items | orderBy:'score':true | limitTo:data.limit">
