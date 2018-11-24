@@ -6,22 +6,22 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>apply job - Container 1</name>
+        <name>Service Catalog_hr - Container 1</name>
         <order>1</order>
-        <sp_page display_value="apply_job">63efe3e7dbf923006a22793ebf961925</sp_page>
+        <sp_page display_value="sc_cat_item_hr">1b40aa90db06a3006a22793ebf9619e2</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>alex.huang</sys_created_by>
-        <sys_created_on>2018-11-22 10:11:57</sys_created_on>
-        <sys_id>67f1c0f7db3d23006a22793ebf9619ab</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>apply job - Container 1</sys_name>
+        <sys_created_on>2018-11-24 11:00:34</sys_created_on>
+        <sys_id>9740aad0db06a3006a22793ebf9619f8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Service Catalog_hr - Container 1</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
-        <sys_update_name>sp_container_67f1c0f7db3d23006a22793ebf9619ab</sys_update_name>
+        <sys_update_name>sp_container_9740aad0db06a3006a22793ebf9619f8</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-22 10:11:57</sys_updated_on>
+        <sys_updated_on>2018-11-24 11:01:36</sys_updated_on>
         <title/>
         <width>container</width>
     </sp_container>
