@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">a370f3ecdbcea3006a22793ebf961994</sp_column>
+        <sp_widget display_value="">930ab764db02e3006a22793ebf961969</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-25 12:22:16</sys_created_on>
+        <sys_id>7d9c37e4db02e3006a22793ebf96199f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sp_instance_7d9c37e4db02e3006a22793ebf96199f</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-25 12:22:16</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=7d9c37e4db02e3006a22793ebf96199f"/>
+</record_update>

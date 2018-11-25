@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">ab2573a0db02e3006a22793ebf96196b</sp_column>
+        <sp_widget display_value="HR Popular Forms1">3836b7a0db02e3006a22793ebf961928</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-25 11:58:01</sys_created_on>
+        <sys_id>ae07f3e0db02e3006a22793ebf961992</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sp_instance_ae07f3e0db02e3006a22793ebf961992</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-25 11:58:01</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=ae07f3e0db02e3006a22793ebf961992"/>
+</record_update>
