@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="job listing" max_length="40" name="x_269830_job_appli_job_listing" type="collection">
+        <element choice="1" label="applied" max_length="200" name="applied" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="no" value="no"/>
+                <element inactive_on_update="false" label="yes" value="yes"/>
+            </choice>
+        </element>
         <element label="end date" mandatory="true" max_length="40" name="end_date" type="glide_date_time"/>
         <element display="true" label="job description" mandatory="true" max_length="200" name="job_description" type="string"/>
         <element label="job description long" max_length="800" name="job_description_long" type="string"/>
