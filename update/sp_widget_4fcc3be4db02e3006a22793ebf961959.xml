@@ -3,6 +3,57 @@
         <category>sc</category>
         <client_script><![CDATA[function ($scope, $http, spScUtil, spUtil, nowAttachmentHandler, $rootScope, $sanitize, $window, $sce, i18n, $timeout, $log, spAriaUtil, $document, spModal, $q, spAtf, $location) {
 	var c = this;
+	
+	c.init = function(){
+		c.data.action = "display_job_description";
+		c.server.update({action: 'display_job_description'}).then(function(){
+				//if(c.data.jobDescription!=null){		
+				//alert(Object.values(c.data.jobDescription));	
+			     $scope.page.g_form.setValue("job_description",c.data.jobDescription);
+				//}			   
+		});
+	};
+	
+	
+	c.showOrderNowButton = function() {
+		if (c.data.sys_id = '16875320dbcea3006a22793ebf9619ea'){
+			return false;
+		}
+		else{
+			return !$scope.data.is_cart_item && (c.data.sc_cat_item.use_sc_layout || !c.data.sc_cat_item.no_order_now);
+		}		
+	}
+	c.showOrderNowButton2 = function() {
+		if (c.data.sys_id = '16875320dbcea3006a22793ebf9619ea'){
+			return true;
+		}
+		return false;
+	}
+
+
+		$scope.triggerOnSubmit = function(){
+		if ($scope.options.isServiceWorkspace && $window.frameElement) {
+			var workspaceParams = {};
+			workspaceParams.sysparm_parent_table = $window.frameElement.getAttribute('parent-table');
+			workspaceParams.sysparm_parent_sys_id = $window.frameElement.getAttribute('parent-sys-id');
+			$scope.data.workspaceParams = workspaceParams;
+		}
+		$scope.data.sc_cat_item.item_action = "order";
+		$scope.data.sc_cat_item.quantity = c.quantity;
+		if (g_form)
+			return g_form.submit();
+		return false;
+	}
+	$scope.triggerOnApply = function(){	
+		var jobDescription = g_form.getValue('job_description');
+		document.location= "?id=sc_cat_item_hr_1&sys_id=20685720dbcea3006a22793ebf9619ee&sys_job_description="+jobDescription;
+	}
+
+	
+	
+	
+	
+	
 	c.quantity = c.data.quantity ? c.data.quantity + "" : "1";
 	c.mandatory = [];
 	$scope.stickyHeaderTop = '0px';
@@ -107,20 +158,7 @@
 			(!c.data.sc_cat_item.no_order_now || !c.data.sc_cat_item.no_cart);
 	}
 
-	c.showOrderNowButton = function() {
-		if (c.data.sys_id = '16875320dbcea3006a22793ebf9619ea'){
-			return false;
-		}
-		else{
-			return !$scope.data.is_cart_item && (c.data.sc_cat_item.use_sc_layout || !c.data.sc_cat_item.no_order_now);
-		}		
-	}
-c.showOrderNowButton2 = function() {
-		if (c.data.sys_id = '16875320dbcea3006a22793ebf9619ea'){
-			return true;
-		}
-		return false;
-	}
+	
 
 	c.showAddToWishlist = function () {
 		return !$scope.submitted && (c.data.showWishlist && !c.data.is_cart_item && c.options.show_add_to_wishlist_button === 'true');
@@ -305,24 +343,7 @@ c.showOrderNowButton2 = function() {
 			return g_form.submit();
 		return false;
 	}
-
-	$scope.triggerOnSubmit = function(){
-		if ($scope.options.isServiceWorkspace && $window.frameElement) {
-			var workspaceParams = {};
-			workspaceParams.sysparm_parent_table = $window.frameElement.getAttribute('parent-table');
-			workspaceParams.sysparm_parent_sys_id = $window.frameElement.getAttribute('parent-sys-id');
-			$scope.data.workspaceParams = workspaceParams;
-		}
-		$scope.data.sc_cat_item.item_action = "order";
-		$scope.data.sc_cat_item.quantity = c.quantity;
-		if (g_form)
-			return g_form.submit();
-		return false;
-	}
-	$scope.triggerOnApply = function(){		
-		document.location= "?id=sc_cat_item_hr_1&sys_id=20685720dbcea3006a22793ebf9619ee&sys_job_description=";
-	}
-
+	
 	function setFieldsReadonly() {
 		var allFields = g_form.getFieldNames();
 		for (var fieldName in allFields) {
@@ -696,6 +717,25 @@ c.showOrderNowButton2 = function() {
         <roles>snc_external,snc_internal</roles>
         <script><![CDATA[// populate the 'data' variable with catalog item, variables, and variable view
 (function() {
+	
+	
+		
+		if(input.action=="display_job_description"){
+			gs.addInfoMessage("1");
+			var job= $sp.getParameter('sys_job_description');
+			if(job!= null){
+				task = new GlideRecord ('x_269830_job_appli_job_listing');
+				task.addQuery('sys_id', job); 	
+				task.query(); 		
+				if (task.next()){ 
+					data.jobDescription = task.job_description;
+				} 		
+			}
+		}
+	
+	
+	
+	
 	var embeddedWidgetOptions = ['auto_redirect', 'requested_for_id', 'requested_for_display'];
 	if (input && input.action == 'init_item') {
 		data._generatedItemGUID = gs.generateGUID();
@@ -870,7 +910,10 @@ c.showOrderNowButton2 = function() {
 			data.recordFound = false;
 			return;
 		}
-	
+		
+		
+		
+		
 		data.sc_cat_item = $sp.getCatalogItem(data.sys_id, true);
 		data.hideDeliveryTime = (options.hide_delivery_time == "true" || data.sc_cat_item.sys_class_name == 'sc_cat_item_producer' || data.sc_cat_item.sys_class_name == 'sc_cat_item_guide' || data.sc_cat_item.sys_class_name == 'std_change_record_producer');
 		if (data.sc_cat_item.category) {
@@ -1049,15 +1092,15 @@ c.showOrderNowButton2 = function() {
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-25 12:23:10</sys_created_on>
         <sys_id>4fcc3be4db02e3006a22793ebf961959</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>67</sys_mod_count>
         <sys_name>SC Catalog Item1</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sp_widget_4fcc3be4db02e3006a22793ebf961959</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-25 18:33:21</sys_updated_on>
-        <template><![CDATA[<div id="sc_cat_item" ng-if="::data.recordFound">
+        <sys_updated_on>2018-11-27 09:22:20</sys_updated_on>
+        <template><![CDATA[<div id="sc_cat_item" ng-init=init() ng-if="::data.recordFound">
   <sp-widget widget="c.orderItemModal" ng-if="c.orderItemModal"></sp-widget>
   <div class="row" ng-if="::data.sc_cat_item" >
     <div class="col-sm-12" ng-class="{true: 'col-md-9', false: 'col-md-12'}[options.display_cart_on_right === 'true']" id="catItemTop">

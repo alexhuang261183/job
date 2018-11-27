@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="which job application has been applied">b7643801db0ee3006a22793ebf9619b6</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-26 11:04:44</sys_created_on>
+        <sys_id>3f643801db0ee3006a22793ebf9619b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b7643801db0ee3006a22793ebf9619b6</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sys_report_users_groups_3f643801db0ee3006a22793ebf9619b6</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-26 11:04:44</sys_updated_on>
+        <user_id display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user_id>
+    </sys_report_users_groups>
+</record_update>
