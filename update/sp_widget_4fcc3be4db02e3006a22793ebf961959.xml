@@ -2,58 +2,9 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>sc</category>
         <client_script><![CDATA[function ($scope, $http, spScUtil, spUtil, nowAttachmentHandler, $rootScope, $sanitize, $window, $sce, i18n, $timeout, $log, spAriaUtil, $document, spModal, $q, spAtf, $location) {
+	
+
 	var c = this;
-	
-	c.init = function(){
-		c.data.action = "display_job_description";
-		c.server.update({action: 'display_job_description'}).then(function(){
-				//if(c.data.jobDescription!=null){		
-				//alert(Object.values(c.data.jobDescription));	
-			     $scope.page.g_form.setValue("job_description",c.data.jobDescription);
-				//}			   
-		});
-	};
-	
-	
-	c.showOrderNowButton = function() {
-		if (c.data.sys_id = '16875320dbcea3006a22793ebf9619ea'){
-			return false;
-		}
-		else{
-			return !$scope.data.is_cart_item && (c.data.sc_cat_item.use_sc_layout || !c.data.sc_cat_item.no_order_now);
-		}		
-	}
-	c.showOrderNowButton2 = function() {
-		if (c.data.sys_id = '16875320dbcea3006a22793ebf9619ea'){
-			return true;
-		}
-		return false;
-	}
-
-
-		$scope.triggerOnSubmit = function(){
-		if ($scope.options.isServiceWorkspace && $window.frameElement) {
-			var workspaceParams = {};
-			workspaceParams.sysparm_parent_table = $window.frameElement.getAttribute('parent-table');
-			workspaceParams.sysparm_parent_sys_id = $window.frameElement.getAttribute('parent-sys-id');
-			$scope.data.workspaceParams = workspaceParams;
-		}
-		$scope.data.sc_cat_item.item_action = "order";
-		$scope.data.sc_cat_item.quantity = c.quantity;
-		if (g_form)
-			return g_form.submit();
-		return false;
-	}
-	$scope.triggerOnApply = function(){	
-		var jobDescription = g_form.getValue('job_description');
-		document.location= "?id=sc_cat_item_hr_1&sys_id=20685720dbcea3006a22793ebf9619ee&sys_job_description="+jobDescription;
-	}
-
-	
-	
-	
-	
-	
 	c.quantity = c.data.quantity ? c.data.quantity + "" : "1";
 	c.mandatory = [];
 	$scope.stickyHeaderTop = '0px';
@@ -159,7 +110,59 @@
 	}
 
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+// 	c.showOrderNowButton = function() {
+// 		return !$scope.data.is_cart_item && (c.data.sc_cat_item.use_sc_layout || !c.data.sc_cat_item.no_order_now);
+// 	}
+	c.showOrderNowButton = function() {
+		if (c.data.sys_id=== '16875320dbcea3006a22793ebf9619ea'){
+			return false;
+		}
+		else{
+			return true;
+		}		
+	}
+	c.showOrderNowButton2 = function() {
+		if (c.data.sys_id === '16875320dbcea3006a22793ebf9619ea'){
+			return true;
+		}
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	c.showAddToWishlist = function () {
 		return !$scope.submitted && (c.data.showWishlist && !c.data.is_cart_item && c.options.show_add_to_wishlist_button === 'true');
 	}
@@ -181,10 +184,35 @@
 		$scope.data.showMsg = false;
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	c.showAttachments = function() {
-		return !$scope.submitted &&
+		if (c.data.sys_id=== '16875320dbcea3006a22793ebf9619ea'){
+			return false;
+		}
+		else{
+			return !$scope.submitted &&
 			c.data.sc_cat_item.sys_class_name !== "std_change_record_producer";
+		}
+
 	};
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	$scope.$on('dialog.upload_too_large.show', function(e){
 		$log.error($scope.m.largeAttachmentMsg);
@@ -219,17 +247,29 @@
 		$scope.is_update_wishlist = false;
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   if ($scope.data.sc_cat_item) {
 		$scope.data.sc_cat_item.description = $sce.trustAsHtml($scope.data.sc_cat_item.description);
-		if (angular.equals($scope.data.sc_cat_item._fields, {})){
+		if (angular.equals($scope.data.sc_cat_item._fields, {}))
 				$scope.data.no_fields = true;
-		}		
-		else if (c.data.sys_id = '16875320dbcea3006a22793ebf9619ea'){			 
-			$scope.applyButtonMsg = $scope.m.applyMsg;			
-		}
-		else {
+		if ($scope.data.sc_cat_item.sys_class_name !== "sc_cat_item_producer" && $scope.data.sc_cat_item.sys_class_name !== "std_change_record_producer")
+			$scope.submitButtonMsg = $scope.m.orderNowMsg;
+	    else if(c.data.sys_id=== '16875320dbcea3006a22793ebf9619ea')
+			$scope.applyButtonMsg = $scope.m.applyMsg;
+		else
 			$scope.submitButtonMsg = $scope.m.submitMsg;
-		}
+		
 		// Breadcrumbs
 		if (!$scope.data.categories)
 		$scope.data.categories = [];
@@ -261,6 +301,16 @@
 		spUtil.setSearchPage('sc');
 	};
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	c.getItemId = function () {
 		return $scope.data.sc_cat_item ? $scope.data.sc_cat_item.sys_id : -1;
 	};
@@ -303,7 +353,12 @@
 	});
 
 	$scope.addToWishlist = function() {
-		$scope.submitting = true;
+		if (c.data.sys_id === '16875320dbcea3006a22793ebf9619ea'){
+			$scope.submitting = false;			
+		}
+		else if (c.data.sys_id === '20685720dbcea3006a22793ebf9619ee'){
+			$scope.submitting = true;		
+		}	
 		$scope.m.actionMsg = $scope.data.is_wishlist_item ? $scope.m.wishlistUpdateMsg : $scope.m.wishlistAddMsg;
 		$scope.m.actionMsg += addLink('?id=sc_wishlist', $scope.m.viewWishListMsg);
 		$scope.m.actionMsg += '<i class="fa fa-close pull-right pointer" aria-label="${Close Notification}" tabindex="0" ng-click="c.hideCartMsg()"/>';
@@ -343,7 +398,86 @@
 			return g_form.submit();
 		return false;
 	}
+
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	$scope.triggerOnSubmit = function(){
+		if ($scope.options.isServiceWorkspace && $window.frameElement) {
+			var workspaceParams = {};
+			workspaceParams.sysparm_parent_table = $window.frameElement.getAttribute('parent-table');
+			workspaceParams.sysparm_parent_sys_id = $window.frameElement.getAttribute('parent-sys-id');
+			$scope.data.workspaceParams = workspaceParams;
+		}
+		$scope.data.sc_cat_item.item_action = "order";
+		$scope.data.sc_cat_item.quantity = c.quantity;
+		if (g_form){	
+			var s = g_form.submit();
+			document.location= "?id=home";
+			return s;
+		}
+		else{
+			return false;
+		}
+		
+	}
+	
+	$scope.triggerOnApply = function(){	
+		$scope.applying = true;
+		var jobDescription = g_form.getValue('job_description');
+		document.location= "?id=sc_cat_item_hr_1&sys_id=20685720dbcea3006a22793ebf9619ee&sys_job_description="+jobDescription;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	function setFieldsReadonly() {
 		var allFields = g_form.getFieldNames();
 		for (var fieldName in allFields) {
@@ -495,7 +629,12 @@
 	}
 
 	function postCatalogFormRequest() {
-		$scope.submitting = true;
+		if (c.data.sys_id === '16875320dbcea3006a22793ebf9619ea'){
+			$scope.submitting = false;			
+		}
+		else if (c.data.sys_id === '20685720dbcea3006a22793ebf9619ee'){
+			$scope.submitting = true;			
+		}	
 		if ($scope.data.is_wishlist_item) {
 			$scope.is_update_wishlist = false;
 			$scope.data.show_wishlist_msg = false;
@@ -572,7 +711,6 @@
             var titleHeight = $document[0].getElementsByClassName('sc-sticky-item-header')[0].clientHeight;
             $scope.stickyHeaderTop = '-' + (titleHeight - 20 - $document[0].getElementsByClassName('sc-cat-item-short-description')[0].clientHeight) + 'px;';
         }
-	
     });
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -718,25 +856,10 @@
         <script><![CDATA[// populate the 'data' variable with catalog item, variables, and variable view
 (function() {
 	
-	
-		
-		if(input.action=="display_job_description"){
-			gs.addInfoMessage("1");
-			var job= $sp.getParameter('sys_job_description');
-			if(job!= null){
-				task = new GlideRecord ('x_269830_job_appli_job_listing');
-				task.addQuery('sys_id', job); 	
-				task.query(); 		
-				if (task.next()){ 
-					data.jobDescription = task.job_description;
-				} 		
-			}
-		}
+	//data.sys_id = $sp.getParameter("sys_id");
 	
 	
-	
-	
-	var embeddedWidgetOptions = ['auto_redirect', 'requested_for_id', 'requested_for_display'];
+var embeddedWidgetOptions = ['auto_redirect', 'requested_for_id', 'requested_for_display'];
 	if (input && input.action == 'init_item') {
 		data._generatedItemGUID = gs.generateGUID();
 		return;
@@ -804,6 +927,17 @@
 
 	options.show_add_cart_button = (options.show_add_cart_button == "true");
 
+	var clGenerator = new GlideChoiceList();
+	var choiceListQuantity = clGenerator.getChoiceList("sc_cart_item", "quantity");
+	var choicelistQuantityData = [];
+// 	for (var i = 0; i < choiceListQuantity.size(); i++) {
+// 		var choice = choiceListQuantity.get(i);
+// 		if (!isNaN(choice.getValue()))
+// 			choicelistQuantityData.push({value : parseInt(choice.getValue()), label : choice.getLabel()});
+// 	}
+
+// 	data.choiceListQuantity = choicelistQuantityData;
+// 	data.quantity = choicelistQuantityData[0].value;
 
 	if (options.page) {
 		var pageGR = new GlideRecord("sp_page");
@@ -910,10 +1044,7 @@
 			data.recordFound = false;
 			return;
 		}
-		
-		
-		
-		
+	
 		data.sc_cat_item = $sp.getCatalogItem(data.sys_id, true);
 		data.hideDeliveryTime = (options.hide_delivery_time == "true" || data.sc_cat_item.sys_class_name == 'sc_cat_item_producer' || data.sc_cat_item.sys_class_name == 'sc_cat_item_guide' || data.sc_cat_item.sys_class_name == 'std_change_record_producer');
 		if (data.sc_cat_item.category) {
@@ -1092,25 +1223,26 @@
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-25 12:23:10</sys_created_on>
         <sys_id>4fcc3be4db02e3006a22793ebf961959</sys_id>
-        <sys_mod_count>67</sys_mod_count>
+        <sys_mod_count>105</sys_mod_count>
         <sys_name>SC Catalog Item1</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sp_widget_4fcc3be4db02e3006a22793ebf961959</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-27 09:22:20</sys_updated_on>
-        <template><![CDATA[<div id="sc_cat_item" ng-init=init() ng-if="::data.recordFound">
+        <sys_updated_on>2018-11-29 13:28:09</sys_updated_on>
+        <template><![CDATA[<div id="sc_cat_item" ng-if="::data.recordFound">
   <sp-widget widget="c.orderItemModal" ng-if="c.orderItemModal"></sp-widget>
   <div class="row" ng-if="::data.sc_cat_item" >
     <div class="col-sm-12" ng-class="{true: 'col-md-9', false: 'col-md-12'}[options.display_cart_on_right === 'true']" id="catItemTop">
-      <!-- Info Message Box -->
-      <div ng-if="data.show_wishlist_msg" class="alert alert-info">
+      <!--
+	  <!-- Info Message Box -->
+      <!--<div ng-if="data.show_wishlist_msg" class="alert alert-info">
         	{{::m.itemWishlistMsg}}
       </div>
       <!--	Success Message Box	-->
-      <div class="alert alert-success" ng-if="data.showMsg" sc-bind-html-compile="m.actionMsg">
-      </div>
+     <!-- <div class="alert alert-success" ng-if="data.showMsg" sc-bind-html-compile="m.actionMsg">
+      </div> -->
      <div class="panel panel-default">
         <!-- Title Section -->
         <div class="wrapper-md b-b break-word item-header" ng-class="{true: '', false: 'sc-sticky-item-header'}[!c.data.sc_cat_item.short_description]" style="top: {{stickyHeaderTop}}">
@@ -1183,8 +1315,8 @@
                     ${Update Wish List}
                   </button>
                 </span>
-				<button ng-if="::c.showOrderNowButton()" tabindex="0" name="submit" ng-disabled="submitting || submitted" ng-click="triggerOnSubmit()" class="btn btn-primary">{{::submitButtonMsg}}</button>
-                <span ng-if="submitting" style="padding-left:4px">${Submitting...}</span>
+				<!--<button ng-if="::c.showOrderNowButton()" tabindex="0" name="submit" ng-disabled="submitting || submitted" ng-click="triggerOnSubmit()" class="btn btn-primary">{{::submitButtonMsg}}</button>
+                <span ng-if="submitting" style="padding-left:4px">${Submitting...}</span>-->
               </div>
               <div ng-show="hasMandatory(c.mandatory)" class="alert alert-info" style="margin-top: .5em" ng-if="c.options.show_field_validation_messages === 'true'">
                 <span ng-if="hasMandatory(mandatory)">${Required information} </span>
@@ -1250,14 +1382,19 @@
           
           
           
+          
+          
+          
            <div class="form-group">
              <button ng-if="::c.showOrderNowButton()" tabindex="0" name="submit" ng-disabled="submitting || submitted" ng-click="triggerOnSubmit()" class="btn btn-primary btn-block">{{::submitButtonMsg}}</button>
              <span ng-if="submitting" style="padding-left:4px">${Submitting...}</span>             
            </div>
            <div class="form-group">
             <button ng-if="::c.showOrderNowButton2()" tabindex="0" name="apply"  ng-click="triggerOnApply()" class="btn btn-primary btn-block">{{::applyButtonMsg}}</button>
-             <span ng-if="submitting" style="padding-left:4px">${Submitting...}</span>           
+             <span ng-if="applying" style="padding-left:4px">${Go to the next page...}</span>           
            </div>
+          
+          
           
           
           

@@ -7,7 +7,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
-        <cat_item display_value="apply job2">20685720dbcea3006a22793ebf9619ee</cat_item>
+        <cat_item display_value="apply job1">16875320dbcea3006a22793ebf9619ea</cat_item>
         <cat_variable/>
         <condition/>
         <description/>
@@ -15,57 +15,27 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>get job description</name>
+        <name>make job description long read-only</name>
         <order/>
         <script><![CDATA[function onLoad() {
    //Type appropriate comment here, and begin script below
-		
-    var cat = getParmVal('sys_job_description'); 
-	function getParmVal(name) {  
-		name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");  
-		var regexS = "[\\?&]" + name + "=([^&#]*)";  
-		var regex = new RegExp(regexS);  
-		var results = regex.exec(top.location);  
-		if (results == null) {  
-			return "";  
-		} else {  
-			return unescape(results[1]);  
-		}  
-	}
-
-// 	function getParmVal(name){		
-// 		var url = document.URL.parseQuery();
-// 		alert("2"+url);
-// 		if(url[name]){
-// 			return decodeURI(url[name]);
-// 		}
-// 		else{
-// 			return;
-// 		}
-// 	}
-
-	
-	g_form.setValue('job_description',cat);
-	
-	
- }
-
-]]></script>
+   g_form.setReadonly('job_description_long',true);
+}]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>alex.huang</sys_created_by>
-        <sys_created_on>2018-11-25 14:35:22</sys_created_on>
+        <sys_created_on>2018-11-29 13:22:41</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>deaa5cb8db42e3006a22793ebf96197a</sys_id>
-        <sys_mod_count>42</sys_mod_count>
-        <sys_name>get job description</sys_name>
+        <sys_id>1fa0fcc2db4223006a22793ebf96197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>make job description long read-only</sys_name>
         <sys_overrides/>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
-        <sys_update_name>catalog_script_client_deaa5cb8db42e3006a22793ebf96197a</sys_update_name>
+        <sys_update_name>catalog_script_client_1fa0fcc2db4223006a22793ebf96197f</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-28 09:16:22</sys_updated_on>
+        <sys_updated_on>2018-11-29 13:22:41</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>
