@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Validate that the form matches the following condition:
+start date is more than 1 hours before end date</description>
+        <display_name>Field Values Validation</display_name>
+        <inputs/>
+        <order>3</order>
+        <step_config display_value="Field Values Validation">1b97cd31872022008182c9ded0e3ece5</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-30 07:56:57</sys_created_on>
+        <sys_id>ffcf2012db8a23006a22793ebf9619d0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Field Values Validation</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sys_atf_step_ffcf2012db8a23006a22793ebf9619d0</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-30 09:05:09</sys_updated_on>
+        <table>x_269830_job_appli_job_listing</table>
+        <test display_value="job listing">305ee0dedb4a23006a22793ebf961905</test>
+        <timeout/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=ffcf2012db8a23006a22793ebf9619d0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>ffcf2012db8a23006a22793ebf9619d0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-30 07:56:57</sys_created_on>
+        <sys_id>73cf2012db8a23006a22793ebf9619d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-30 07:56:57</sys_updated_on>
+        <value>x_269830_job_appli_job_listing</value>
+        <variable display_value="">a0e13cc35320220002c6435723dc3467</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>ffcf2012db8a23006a22793ebf9619d0</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-11-30 07:56:57</sys_created_on>
+        <sys_id>bfcf2012db8a23006a22793ebf9619d1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-11-30 08:49:23</sys_updated_on>
+        <value>start_dateMORETHANend_date@hour@before@1^EQ</value>
+        <variable display_value="">4aa838f25320220002c6435723dc34e1</variable>
+    </sys_variable_value>
+</record_update>

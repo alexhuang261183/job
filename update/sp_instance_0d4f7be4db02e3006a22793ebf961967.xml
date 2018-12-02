@@ -16,17 +16,42 @@
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-25 12:33:57</sys_created_on>
         <sys_id>0d4f7be4db02e3006a22793ebf961967</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sp_instance_0d4f7be4db02e3006a22793ebf961967</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-25 12:33:57</sys_updated_on>
+        <sys_updated_on>2018-12-02 10:14:30</sys_updated_on>
         <title/>
         <url/>
-        <widget_parameters/>
+        <widget_parameters><![CDATA[{
+	"show_add_cart_button": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_field_validation_messages": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_add_to_wishlist_button": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"display_cart_on_right": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_less_description": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"hide_delivery_time": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
     </sp_instance>
     <sys_translated_text action="delete_multiple" query="documentkey=0d4f7be4db02e3006a22793ebf961967"/>
 </record_update>

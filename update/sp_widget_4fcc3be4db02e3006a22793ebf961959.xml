@@ -431,9 +431,8 @@
 		}
 		$scope.data.sc_cat_item.item_action = "order";
 		$scope.data.sc_cat_item.quantity = c.quantity;
-		if (g_form){	
-			var s = g_form.submit();
-			document.location= "?id=home";
+		if (g_form){				
+			var s = g_form.submit();				
 			return s;
 		}
 		else{
@@ -442,10 +441,17 @@
 		
 	}
 	
-	$scope.triggerOnApply = function(){	
-		$scope.applying = true;
-		var jobDescription = g_form.getValue('job_description');
+	$scope.triggerOnApply = function(){		
+		if (g_form.getValue('job_description') ===""){	
+			alert('Fill in all required fields to Run this report.');			 
+			 //$scope.requiredFields ='Fill in all required fields to Run this report.';
+		}
+	   else{
+		   $scope.applying = true;
+		   var jobDescription = g_form.getValue('job_description');
 		document.location= "?id=sc_cat_item_hr_1&sys_id=20685720dbcea3006a22793ebf9619ee&sys_job_description="+jobDescription;
+	   }
+		
 	}
 	
 	
@@ -501,7 +507,7 @@
 			"requested_for_display" : ""
 		};
 
-		if ($scope.data.sc_cat_item.sys_class_name != "sc_cat_item_producer" && $scope.data.sc_cat_item.sys_class_name != "std_change_record_producer") {
+		if ($scope.data.sc_cat_item.sys_class_name != "sc_cat_item_producer" && $scope.data.sc_cat_item.sys_class_name != "std_change_record_producer") {			
 			if ($scope.data.sys_properties.twostep) {
 				var payload = {
 					cart: 'cart_' + $scope.data.sc_cat_item.sys_id,
@@ -571,7 +577,7 @@
 					});
 				}
 			}
-		} else {
+		} else {			
 			postCatalogFormRequest().then(function(response) {
 				var a = response.data.result;
 				if (!$scope.options.isServiceWorkspace)
@@ -855,8 +861,6 @@
         <roles>snc_external,snc_internal</roles>
         <script><![CDATA[// populate the 'data' variable with catalog item, variables, and variable view
 (function() {
-	
-	//data.sys_id = $sp.getParameter("sys_id");
 	
 	
 var embeddedWidgetOptions = ['auto_redirect', 'requested_for_id', 'requested_for_display'];
@@ -1223,14 +1227,14 @@ var embeddedWidgetOptions = ['auto_redirect', 'requested_for_id', 'requested_for
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-25 12:23:10</sys_created_on>
         <sys_id>4fcc3be4db02e3006a22793ebf961959</sys_id>
-        <sys_mod_count>105</sys_mod_count>
+        <sys_mod_count>135</sys_mod_count>
         <sys_name>SC Catalog Item1</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sp_widget_4fcc3be4db02e3006a22793ebf961959</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-29 13:28:09</sys_updated_on>
+        <sys_updated_on>2018-12-02 12:37:51</sys_updated_on>
         <template><![CDATA[<div id="sc_cat_item" ng-if="::data.recordFound">
   <sp-widget widget="c.orderItemModal" ng-if="c.orderItemModal"></sp-widget>
   <div class="row" ng-if="::data.sc_cat_item" >
@@ -1243,6 +1247,7 @@ var embeddedWidgetOptions = ['auto_redirect', 'requested_for_id', 'requested_for
       <!--	Success Message Box	-->
      <!-- <div class="alert alert-success" ng-if="data.showMsg" sc-bind-html-compile="m.actionMsg">
       </div> -->
+    
      <div class="panel panel-default">
         <!-- Title Section -->
         <div class="wrapper-md b-b break-word item-header" ng-class="{true: '', false: 'sc-sticky-item-header'}[!c.data.sc_cat_item.short_description]" style="top: {{stickyHeaderTop}}">
@@ -1390,7 +1395,7 @@ var embeddedWidgetOptions = ['auto_redirect', 'requested_for_id', 'requested_for
              <span ng-if="submitting" style="padding-left:4px">${Submitting...}</span>             
            </div>
            <div class="form-group">
-            <button ng-if="::c.showOrderNowButton2()" tabindex="0" name="apply"  ng-click="triggerOnApply()" class="btn btn-primary btn-block">{{::applyButtonMsg}}</button>
+            <button ng-if="::c.showOrderNowButton2()" tabindex="0" name="apply" ng-disabled="submitting || submitted" ng-click="triggerOnApply()" class="btn btn-primary btn-block">{{applyButtonMsg}}</button>
              <span ng-if="applying" style="padding-left:4px">${Go to the next page...}</span>           
            </div>
           
