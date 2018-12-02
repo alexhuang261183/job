@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Open Service Catalog_hr page in the MyHR portal</description>
+        <display_name>Open a Form (SP)</display_name>
+        <inputs/>
+        <order>4</order>
+        <step_config display_value="Open a Form (SP)">ca58a941e7020300b2888f49c2f6a95e</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 18:59:53</sys_created_on>
+        <sys_id>914a5d47db86a3006a22793ebf96191e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Open a Form (SP)</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sys_atf_step_914a5d47db86a3006a22793ebf96191e</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 19:39:19</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <test display_value="apply job">1fef85cfdb46a3006a22793ebf9619b6</test>
+        <timeout/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=914a5d47db86a3006a22793ebf96191e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>914a5d47db86a3006a22793ebf96191e</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 18:59:53</sys_created_on>
+        <sys_id>12ba5187db86a3006a22793ebf961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 18:59:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a266791b23101300ab65ff5e17bf654b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>914a5d47db86a3006a22793ebf96191e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 18:59:53</sys_created_on>
+        <sys_id>56ba5187db86a3006a22793ebf961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 18:59:53</sys_updated_on>
+        <value>2b9afcbcdb82e3006a22793ebf96191e</value>
+        <variable display_value="">757a6181e7020300b2888f49c2f6a9f7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>914a5d47db86a3006a22793ebf96191e</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 18:59:53</sys_created_on>
+        <sys_id>5aba5187db86a3006a22793ebf961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 18:59:53</sys_updated_on>
+        <value>sc_cat_item_producer</value>
+        <variable display_value="">ee6aa11723101300ab65ff5e17bf65db</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>914a5d47db86a3006a22793ebf96191e</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 18:59:53</sys_created_on>
+        <sys_id>5eba5187db86a3006a22793ebf961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 18:59:53</sys_updated_on>
+        <value>afc5410bdb7da3006a22793ebf961948</value>
+        <variable display_value="">38a5351b23101300ab65ff5e17bf65fa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>914a5d47db86a3006a22793ebf96191e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 18:59:53</sys_created_on>
+        <sys_id>96ba5187db86a3006a22793ebf961941</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 19:24:09</sys_updated_on>
+        <value>ff170fcbdbb1e3006a22793ebf96193a</value>
+        <variable display_value="">5d5a2181e7020300b2888f49c2f6a9dc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>914a5d47db86a3006a22793ebf96191e</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 18:59:53</sys_created_on>
+        <sys_id>d2ba5187db86a3006a22793ebf961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 18:59:53</sys_updated_on>
+        <value/>
+        <variable display_value="">a38ae181e7020300b2888f49c2f6a92e</variable>
+    </sys_variable_value>
+</record_update>

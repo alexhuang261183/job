@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>jobListingNewRecord</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-02 17:40:01</sys_created_on>
+        <sys_id>9c78458bdb46a3006a22793ebf961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>jobListingNewRecord</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sys_ui_view_9c78458bdb46a3006a22793ebf961925</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-02 17:40:01</sys_updated_on>
+        <title>jobListingNewRecord</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

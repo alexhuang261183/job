@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
-        <description>Open a new 'job listing' form</description>
+        <description>Open the 'jobListingNewRecord' view of a new 'job listing' form</description>
         <display_name>Open a New Form</display_name>
         <inputs/>
         <order>1</order>
@@ -10,14 +10,14 @@
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-30 07:56:56</sys_created_on>
         <sys_id>77cf2012db8a23006a22793ebf9619bd</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Open a New Form</sys_name>
         <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
         <sys_policy/>
         <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
         <sys_update_name>sys_atf_step_77cf2012db8a23006a22793ebf9619bd</sys_update_name>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-30 09:05:09</sys_updated_on>
+        <sys_updated_on>2018-12-02 17:40:15</sys_updated_on>
         <table>x_269830_job_appli_job_listing</table>
         <test display_value="job listing">305ee0dedb4a23006a22793ebf961905</test>
         <timeout/>
@@ -45,10 +45,10 @@
         <sys_created_by>alex.huang</sys_created_by>
         <sys_created_on>2018-11-30 07:56:56</sys_created_on>
         <sys_id>77cf2012db8a23006a22793ebf9619be</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>alex.huang</sys_updated_by>
-        <sys_updated_on>2018-11-30 07:56:56</sys_updated_on>
-        <value/>
+        <sys_updated_on>2018-12-02 17:40:15</sys_updated_on>
+        <value>jobListingNewRecord</value>
         <variable display_value="">27d4e1c25320220002c6435723dc3486</variable>
     </sys_variable_value>
 </record_update>
