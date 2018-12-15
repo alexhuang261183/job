@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>test automation insert users with roles</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var arrayGroup = [];
+
+var gr = new GlideRecord("sys_user");
+gr.addEncodedQuery("user_nameSTARTSWITHromain.germany^ORuser_nameSTARTSWITHtfs.be.test"); 
+gr.query();
+var group = new GlideRecord("sys_user_group");
+group.addEncodedQuery("nameSTARTSWITHING DE - ILC Team^ORnameSTARTSWITHTFS - Belgium^ORnameSTARTSWITHTFS - GSO Manila");
+group.query();
+while(group.next()){
+	var a = group.name;
+	arrayGroup.push(a);
+	gs.info("1"+a);
+}
+var arrayGroupLength = arrayGroup.length;
+for (var i = 0; i < arrayGroupLength; i++) {    
+   gs.info("2"+arrayGroup[i]);
+}
+
+if(group.get("name","ING DE - ILC Team") && group.get("name","TFS - Belgium")
+	&& group.get("TFS - GSO Manila")){
+	
+	if(gr.get("user_name","romain.germany")){
+		//insertGroupMember(gr.sys_id,'cbb6a5ef379dcf00142bab2943990edd');
+		insertGroupMember(gr.sys_id,'8bebd02ddbda23006a22793ebf9619d8');
+	}
+	else{
+		//insertUserWithGroupMember("romain.germany","Romain","Germany",'cbb6a5ef379dcf00142bab2943990edd');
+		insertUserWithGroupMember("romain.germany","Romain","Germany",'8bebd02ddbda23006a22793ebf9619d8');
+	}
+	
+	if(gr.get("user_name","tfs.be.test")){
+		//insertGroupMember(gr.sys_id,'01e6b42ddb1e23006a22793ebf96197c');
+		insertGroupMember(gr.sys_id,'01e6b42ddb1e23006a22793ebf96197c');
+		insertGroupMember(gr.sys_id,'e6e8fc2ddb1e23006a22793ebf9619e7');
+	}
+	else{
+		//insertUserWithGroupMember("tfs.be.test","tfs.be.test","",'01e6b42ddb1e23006a22793ebf96197c');
+		insertUserWithGroupMember("tfs.be.test","tfs.be.test","",'01e6b42ddb1e23006a22793ebf96197c');	
+		insertUserWithGroupMember("tfs.be.test","tfs.be.test","",'e6e8fc2ddb1e23006a22793ebf9619e7');
+	}
+	
+}
+
+
+
+function insertGroupMember(sys_id,groupMember_group){
+	var grGroupMember = new GlideRecord("sys_user_grmember");
+	grGroupMember.addQuery("group",groupMember_group);
+	grGroupMember.addQuery("user",sys_id);
+	grGroupMember.query();
+	if(!grGroupMember.next())
+	{
+		grGroupMember.initialize();
+		grGroupMember.user = sys_id;
+		grGroupMember.group =groupMember_group;
+		grGroupMember.insert();
+	}
+}
+
+function insertUserWithGroupMember(user_name, first_name, last_name,groupMember_group){
+	var gr1 = new GlideRecord("sys_user");
+	gr1.addQuery("user_name",user_name);
+	gr1.query();
+	var gr2;
+	if(!gr1.next()){
+		var newUser;		
+		newUser = new GlideRecord('sys_user');
+		newUser.initialize();
+		newUser.user_name = user_name;
+		newUser.first_name = first_name;
+		newUser.last_name = last_name;
+		newUser.insert();
+		
+		gr2 = new GlideRecord("sys_user");
+		gr2.addQuery("sys_id",newUser.sys_id);
+		gr2.query();
+		if(gr2.next()){
+			insertGroupMember(gr2.sys_id,groupMember_group);
+		}	
+	}
+	else{	
+		insertGroupMember(gr1.sys_id,groupMember_group);
+				
+	}
+	
+	
+}
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-10 08:38:38</sys_created_on>
+        <sys_id>38cc48a1dbda23006a22793ebf9619f7</sys_id>
+        <sys_mod_count>65</sys_mod_count>
+        <sys_name>test automation insert users with roles</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sys_script_fix_38cc48a1dbda23006a22793ebf9619f7</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-11 14:06:04</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

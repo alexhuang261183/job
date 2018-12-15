@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description>sc_cat_item_hr_2</description>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hr_popular_forms2</id>
+        <internal>false</internal>
+        <link/>
+        <name>HR Popular Forms2</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[data.sc_catalog = $sp.getValue('sc_catalog');
+data.limit = 6;
+
+//Calculate scores
+var items = []; 
+var sc_cat_item_producer= new GlideAggregate('sc_cat_item');
+//sc_cat_item_producer.addQuery('u_featured',true);
+sc_cat_item_producer.addQuery('active',true);
+sc_cat_item_producer.addQuery('category','7e5ad332db5e23006a22793ebf96195b');
+sc_cat_item_producer.query();
+
+while (sc_cat_item_producer.next()) {
+	
+	 if (!$sp.canReadRecord("sc_cat_item", sc_cat_item_producer.sys_id.getDisplayValue()))
+    continue; // user does not have permission to see this item
+	
+	var item = {};
+    item.name = sc_cat_item_producer.getDisplayValue();
+	item.category = sc_cat_item_producer.category.getDisplayValue();
+	item.sys_id = sc_cat_item_producer.sys_id.toString();
+	
+  items.push(item);
+}
+
+data.items = items;
+
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-14 19:41:04</sys_created_on>
+        <sys_id>2e371f7edb1e23006a22793ebf961975</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>HR Popular Forms2</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sp_widget_2e371f7edb1e23006a22793ebf961975</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-14 20:54:47</sys_updated_on>
+        <template><![CDATA[<h1  class="font-thin m-t-none">{{::options.title}}</h1> 
+
+<div class="row" >      
+  <div class="col-sm-6 col-md-4" ng-repeat="item in data.items | orderBy:'score':true | limitTo:data.limit">
+
+    <div class="panel panel-default">
+      <a href="?id=sc_cat_item_hr_1&sys_id={{item.sys_id}}" class="panel-body block">
+        <div class="overflow-100">
+          <h4 class="m-t-none m-b-xs">{{::item.name}}</h4>
+          <div class="text-muted item-short-desc">{{::item.category}}</div>      
+        </div>
+      </a>
+      
+      <div class="panel-footer">
+        <a href="?id=sc_cat_item_hr_1&sys_id={{item.sys_id}}" class="pull-left text-muted">${View Details}</a> <span ng-if="item.price != '$0.00'" class="pull-right item-price font-bold">{{::item.price}}</span> &nbsp;
+      </div>
+    </div>
+
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

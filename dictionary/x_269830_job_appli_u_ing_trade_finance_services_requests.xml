@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element max_length="40" name="x_269830_job_appli_u_ing_trade_finance_services_requests" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Need 4-eye checking ?" max_length="40" name="u_4_eye" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Need 6-eye checking ?" max_length="40" name="u_6_eye" type="choice">
+            <choice/>
+        </element>
+        <element label="Flow" max_length="40" name="u_flow" type="string"/>
+    </element>
+</database>

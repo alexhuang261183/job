@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_269830_job_appli.ing_trade_finance_services_tasks_user" name="x_269830_job_appli.ing_trade_finance_services_tasks_user">dae22d50db5623006a22793ebf9619cd</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>alex.huang</sys_created_by>
+        <sys_created_on>2018-12-06 16:48:04</sys_created_on>
+        <sys_id>d2e2ed50db5623006a22793ebf961988</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dae22d50db5623006a22793ebf9619cd</sys_name>
+        <sys_package display_value="job application" source="x_269830_job_appli">2ea5cf1adbb563006a22793ebf961912</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="job application">2ea5cf1adbb563006a22793ebf961912</sys_scope>
+        <sys_update_name>sys_embedded_help_role_d2e2ed50db5623006a22793ebf961988</sys_update_name>
+        <sys_updated_by>alex.huang</sys_updated_by>
+        <sys_updated_on>2018-12-06 16:48:04</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
